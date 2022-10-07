@@ -10,6 +10,109 @@ html {
 
 body {
   font-size: 2rem;
+  font-family: "Almarai", sans-serif;
+}
+
+body {
+  background: #f1f0f6;
+  min-height: 100vh;
+  width: 100%;
+  color: #d1b9ba;
+}
+
+.header {
+  width: 100%;
+  height: 7.5rem;
+  background: #8093a6;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #fff3f4;
+}
+.header__figure {
+  width: 7rem;
+  height: 7rem;
+}
+.header__figure--logo {
+  width: 100%;
+  height: 100%;
+}
+.header__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: center;
+}
+.header__list--item {
+  list-style: none;
+}
+.header__list--item--link {
+  text-decoration: none;
+  font-weight: 700;
+  color: #fff3f4;
+  position: relative;
+  transition: 0.5s;
+}
+.header__list--item--link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 0.2rem;
+  bottom: 0;
+  left: 0;
+  background-color: #ffc862;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.header__list--item--link:hover {
+  color: #d1b9ba;
+}
+.header__list--item--link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.header__input {
+  display: flex;
+  gap: 1.5rem;
+  cursor: pointer;
+  align-items: center;
+  font-size: 2rem;
+}
+.header__input--logo {
+  position: relative;
+}
+.header__input--logo::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 0.2rem;
+  bottom: 0;
+  left: 0;
+  background-color: #ffc862;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+  bottom: -20%;
+}
+.header__input--logo:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.header__input--field {
+  background: none;
+  border: none;
+  border-bottom: 0.2rem solid #ffc862;
+  padding: 0.2rem;
+  width: 20%;
+  transition: 0.4s;
+  color: #fff3f4;
+  font-size: 1.75rem;
+}
+.header__input--field:focus {
+  outline: none;
+  width: 100%;
+  border-bottom: 0.4rem solid #ffc862;
 }
 
 /*# sourceMappingURL=style.css.map */

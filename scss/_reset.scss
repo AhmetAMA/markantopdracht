@@ -1,3 +1,5 @@
+@use 'abstract/fonts'; 
+
 *,*::after,*::before{
     margin: 0;
     padding: 0;
@@ -10,4 +12,5 @@ html{
 
 body{
     font-size: 2rem;
+    font-family:fonts.$mainfont ;
 }
