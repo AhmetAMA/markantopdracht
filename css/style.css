@@ -7,6 +7,7 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -247,6 +248,35 @@ body {
 .main__menu--item--textfield--text {
   display: none;
 }
+.main__text {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  margin: 10rem;
+  gap: 4rem;
+}
+.main__text--menuInfo {
+  width: 30rem;
+  height: 37.5rem;
+  background: rgba(128, 147, 166, 0.3725490196);
+  list-style: none;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.main__text--art {
+  height: 90vh;
+  width: 50%;
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.main__text--art--h2 {
+  font-size: 200%;
+}
 .main__fig {
   height: 90vh;
   width: 100%;
@@ -315,7 +345,7 @@ body {
 .main__agenda {
   width: 30rem;
   min-height: 40rem;
-  background: #8093a6;
+  background: rgba(128, 147, 166, 0.3725490196);
   position: absolute;
   top: 50%;
   right: 10%;
@@ -341,6 +371,14 @@ body {
   cursor: pointer;
 }
 .main__agenda--activiteit--link:hover {
+  color: #fff3f4;
+}
+.main__header {
+  position: absolute;
+  top: 45%;
+  left: 22.5%;
+  font-size: 300%;
+  z-index: 2;
   color: #fff3f4;
 }
 
