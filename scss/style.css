@@ -6,7 +6,6 @@
 
 html {
   font-size: 62.5%;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -18,7 +17,7 @@ body {
   background: #f1f0f6;
   min-height: 100vh;
   width: 100%;
-  color: #251B37;
+  color: #d1b9ba;
 }
 
 .main {
@@ -26,15 +25,15 @@ body {
 }
 
 .header {
-  width: 100%;
+  width: 98%;
   height: 7.5rem;
+  margin: 0rem 1rem 1rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
   background: #8093a6;
-  /*border-radius: 0rem 0rem 0.5rem 0.5rem;
-
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;*/
+  border-radius: 0rem 0rem 0.5rem 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 .header__figure {
   width: 7rem;
@@ -73,7 +72,7 @@ body {
   transition: transform 0.25s ease-out;
 }
 .header__list--item--link:hover {
-  color: #251B37;
+  color: #d1b9ba;
 }
 .header__list--item--link:hover::after {
   transform: scaleX(1);
@@ -161,7 +160,7 @@ body {
   transition: transform 0.25s ease-out;
 }
 .footer__list--item--link:hover {
-  color: #251B37;
+  color: #d1b9ba;
 }
 .footer__list--item--link:hover::after {
   transform: scaleX(1);
@@ -178,7 +177,7 @@ body {
   transition: 0.5s;
 }
 .footer__socials--link:hover {
-  color: #251B37;
+  color: #d1b9ba;
 }
 .footer__nieuwsbrief {
   border-bottom: 0.25rem solid #ffc862;
@@ -190,158 +189,6 @@ body {
 }
 .footer__nieuwsbrief--input {
   border: none;
-  border-radius: 0.4rem;
+  border-radius: 0.25rem;
   padding-left: 0.5rem;
-  background: #f1f0f6;
-  color: #8093a6;
-  transition: 0.25s;
-  width: 100%;
-  height: 2rem;
-}
-.footer__nieuwsbrief--input:focus {
-  outline: 0.2rem solid #ffc862;
-}
-
-.main {
-  height: 100%;
-  width: 100%;
-  position: relative;
-}
-.main__menu {
-  min-width: 30rem;
-  max-width: 60rem;
-  min-height: 37.5rem;
-  background: #8093a6;
-  position: absolute;
-  left: 10%;
-  top: 10%;
-  list-style: none;
-  border-radius: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  z-index: 2;
-}
-.main__menu--item--textfield {
-  display: flex;
-  flex-direction: row;
-}
-.main__menu--item--textfield--header {
-  border: none;
-  background: none;
-  color: #251B37;
-  background: none;
-  font-size: 125%;
-  padding: 2rem;
-  border-radius: 0.25rem;
-  transition: 0.2s;
-  cursor: pointer;
-}
-.main__menu--item--textfield--header:active {
-  background-color: #eee;
-}
-.main__menu--item--textfield--header:hover {
-  background-color: #eee;
-}
-.main__menu--item--textfield--text {
-  display: none;
-}
-.main__fig {
-  height: 90vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  z-index: 1;
-}
-.main__fig--img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.main__fig--shade {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(74deg, rgb(128, 147, 166) 12%, rgb(37, 27, 55) 89%);
-  opacity: 0.5;
-  top: 0%;
-  left: 0%;
-}
-.main__arts {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin: 2rem;
-  margin-left: 8rem;
-}
-.main__arts--art {
-  height: 25rem;
-  width: 50%;
-  display: flex;
-  gap: 2rem;
-  border-bottom: 0.1rem solid #ffc862;
-}
-.main__arts--art--img {
-  width: 15rem;
-  height: 15rem;
-  object-fit: cover;
-  border-radius: 0.125rem;
-}
-.main__arts--art--textfield {
-  width: 75%;
-  height: 100%;
-}
-.main__arts--art--textfield--header {
-  font-size: 125%;
-}
-.main__arts--art--textfield--button {
-  margin-top: 2rem;
-  height: 3rem;
-  width: 10rem;
-  border: none;
-  background: #251B37;
-  color: #fff3f4;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  transition: color 0.2s, background 0.2s;
-}
-.main__arts--art--textfield--button:hover {
-  color: #251B37;
-  background: #fff3f4;
-}
-.main__agenda {
-  width: 30rem;
-  min-height: 40rem;
-  background: #8093a6;
-  position: absolute;
-  top: 50%;
-  right: 10%;
-  border-radius: 0.5rem;
-  padding: 2rem;
-  opacity: 0.5;
-  transition: opacity 0.2s;
-}
-.main__agenda:hover {
-  opacity: 1;
-}
-.main__agenda--activiteit--header {
-  color: #fff3f4;
-  font-size: 140%;
-}
-.main__agenda--activiteit--datum:hover {
-  color: #251B37;
-}
-.main__agenda--activiteit--link {
-  text-decoration: none;
-  color: #251B37;
-  transition: color 0.5s;
-  cursor: pointer;
-}
-.main__agenda--activiteit--link:hover {
-  color: #fff3f4;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
