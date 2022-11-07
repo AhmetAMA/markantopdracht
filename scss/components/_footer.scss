@@ -83,3 +83,27 @@
         }
     }
 }
+
+@media screen and (max-width: 50rem) {
+    .footer{
+        font-size: 70%;
+    }
+}
+
+@media screen and (max-width: 37.5rem) {
+    .footer{
+        font-size: 100%;
+        flex-direction: column;
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 23.5rem) {
+    .footer{
+        font-size: 100%;
+        &__list{
+            flex-direction: column;
+            margin-bottom: 1rem;
+        }
+    }
+}
