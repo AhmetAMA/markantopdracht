@@ -1,0 +1,85 @@
+@use '../abstract/colors';
+@use '../abstract/animations';
+
+.footer{
+    width: 100%;
+    min-height: 7.5rem;
+    background: colors.$maincolor;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+    &__list{
+        display: flex;
+        gap: 2rem;
+    
+        &--item {
+            list-style: none;
+
+            &--link {
+                text-decoration: none;
+                font-weight: 700;
+                font-size: 90%;
+                color: colors.$textcolor;
+                position: relative;
+                transition: 0.5s;
+
+                &::after {
+                    @include animations.hoverAnimationAfter
+                }
+
+                &:hover{
+                    color: colors.$textcolorDark;
+                }
+
+                &:hover::after {
+                    @include animations.hoverAnimationAfterhover;
+                }
+            }  
+        }
+    }
+    &__socials{
+        display: flex;
+        gap: 3.5rem;
+        font-size: 180%;
+
+        &--link{
+            color: colors.$textcolor;
+            position: relative;
+            transition: 0.5s;
+            
+            &:hover{
+                color: colors.$textcolorDark;
+            }
+
+           
+        }
+
+    }
+
+    &__nieuwsbrief{
+        border-bottom: 0.25rem solid colors.$CTAColor;
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        border-radius: 0.5rem;  
+
+
+        &--header{
+            color:colors.$textcolor;
+        }
+
+        &--input{
+            border: none;
+            border-radius: 0.40rem;
+            padding-left: 0.5rem;
+            background: colors.$backgroundcolor;
+            color: colors.$maincolor;
+            transition: 0.25s;
+            width: 100%;
+            height: 2rem;
+            &:focus{
+                outline: 0.2rem solid colors.$CTAColor;
+                
+            }
+        }
+    }
+}
