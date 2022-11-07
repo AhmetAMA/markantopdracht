@@ -1,0 +1,19 @@
+@use 'colors';
+
+@mixin hoverAnimationAfter {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 0.2rem;
+    bottom: 0;
+    left: 0;
+    background-color: colors.$CTAColor;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+@mixin hoverAnimationAfterhover {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}

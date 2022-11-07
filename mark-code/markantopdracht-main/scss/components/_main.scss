@@ -1,0 +1,229 @@
+@use '../abstract/colors';
+@use '../abstract/animations';
+
+.main {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    
+    &__menu {
+        min-width: 30rem;
+        max-width: 60rem;
+        min-height: 37.5rem;
+        background: colors.$maincolor;
+        position: absolute;
+        left: 10%;
+        top: 10%;
+        list-style: none;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction:column;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: 2;
+        &--item {
+           
+
+            &--textfield {
+                display: flex;
+                flex-direction: row;
+                &--header{
+                    border: none;
+                    background: none;
+                    color: colors.$textcolorDark;
+                    background: none;
+                    font-size: 125%;
+                    padding: 2rem;
+                    border-radius: 0.25rem;
+                    transition: 0.2s;
+                    cursor: pointer;
+                    
+                    &:active{
+                        background-color: #eee;
+                    }
+                    
+                    &:hover{
+                        background-color: #eee;
+                        
+                    }
+                }
+                
+                &--text{
+                    display: none;
+                }
+            }
+          
+
+            
+            
+
+        }
+    }
+    &__text{
+        height: 90vh;
+        width: 100%;
+        display: flex;
+        margin: 10rem;
+        gap: 4rem;
+        
+
+        &--menuInfo{
+            width: 30rem;
+            height: 37.5rem;
+            background: colors.$maincolordlight;
+            list-style: none;
+            border-radius: 1rem;
+            display: flex;
+            flex-direction:column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        &--art{
+            height: 90vh;
+            width: 50%;
+            margin-top: 6rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            &--h2{
+                font-size: 200%;
+
+            }
+
+            
+            
+        }
+    }
+
+
+    &__fig {
+        height: 90vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+
+        &--img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+
+        &--shade {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: colors.$linear-gradient;
+            opacity: 0.5;
+            top: 0%;
+            left: 0%;
+        }
+    }
+
+    &__arts {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin: 2rem;
+        margin-left: 8rem;
+
+        &--art {
+            height: 25rem;
+            width: 50%;
+
+            display: flex;
+            gap: 2rem;
+            border-bottom: 0.1rem solid colors.$CTAColor ;
+
+            &--img {
+                width: 15rem;
+                height: 15rem;
+                object-fit: cover;
+                border-radius: 0.125rem;
+            }
+
+            &--textfield {
+                width: 75%;
+                height: 100%;
+
+                &--header {
+                    font-size: 125%;
+                }
+
+                &--button {
+                    margin-top: 2rem;
+                    height: 3rem;
+                    width: 10rem;
+                    border: none;
+                    background: colors.$textcolorDark;
+                    color: colors.$textcolor;
+                    border-radius: 0.25rem;
+                    cursor: pointer;
+                    transition: color 0.2s, background 0.2s;
+                    &:hover{
+                        color: colors.$textcolorDark;
+                        background: colors.$textcolor;
+                    }
+                }
+            }
+        }
+    }
+
+    &__agenda{
+        width: 30rem;
+        min-height: 40rem;
+        background: colors.$maincolordlight;
+        position: absolute;
+        top: 50%;
+        right: 10%;
+        border-radius: 0.5rem;
+        padding:2rem;
+        opacity: 0.5;
+        transition: opacity 0.2s;
+        &:hover{
+            opacity: 1;
+        }
+
+        &--activiteit{
+            
+            &--header{
+                color: colors.$textcolor;
+                font-size: 140%;  
+            }
+
+            &--datum{
+                &:hover{
+                    color: colors.$textcolorDark;
+                }
+            }
+
+            &--link{
+                text-decoration: none;
+                color: colors.$textcolorDark;
+                transition: color 0.5s;
+                cursor: pointer;
+
+                &:hover{
+                    color: colors.$textcolor;
+                    
+                }
+
+                
+            }
+        }
+    }
+
+    &__header{
+        position: absolute;
+        top: 45%;
+        left: 22.5%;
+        font-size: 300%;
+        z-index: 2;
+        color: colors.$textcolor;
+
+    }
+}
