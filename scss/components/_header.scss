@@ -104,3 +104,36 @@
 
 
 }
+
+
+@media screen and (max-width: 50rem) {
+    .header{
+        gap: 4rem;
+        font-size: 80%;
+        justify-content: center;
+        padding-left: 4rem;
+        &__figure{
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 37.5rem) {
+    .header{
+        font-size: 80%;
+        padding: 0;
+        &__input{
+            display: none;
+            
+        }
+    }
+
+}
+
+@media screen and (max-width: 23.5rem) {
+    .header{
+        padding:  0;
+        font-size: 60%;
+     
+    }
+}

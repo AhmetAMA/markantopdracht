@@ -2,9 +2,10 @@
 @use '../abstract/animations';
 
 .main {
-    height: 100%;
+    min-height: 90vh;
     width: 100%;
     position: relative;
+
     
     &__menu {
         min-width: 30rem;
@@ -60,12 +61,18 @@
         }
     }
     &__text{
-        height: 90vh;
-        width: 100%;
+        min-height: 90vh;
+        
         display: flex;
         margin: 10rem;
         gap: 4rem;
         
+        &--2{
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            
+        }
 
         &--menuInfo{
             width: 30rem;
@@ -80,7 +87,7 @@
         }
 
         &--art{
-            height: 90vh;
+            min-height: 90vh;
             width: 50%;
             margin-top: 6rem;
             display: flex;
@@ -91,14 +98,54 @@
 
             }
 
+            &--header{
+                font-size: 100%;
+            }
             
-            
+            &--para{
+                margin-bottom: 2rem;
+                margin-top: -2rem;
+            }
+
+            &--ul{
+                list-style: none;
+                
+            }
+
+            &--li{
+                margin-top: 0.3rem;
+
+                &::before{
+                    content: "-";
+                    margin-right: 0.5rem;
+                }
+            }
+
+            &--link{
+                text-decoration: none;
+                position: relative;
+                transition: 0.5s;
+                
+                color: colors.$maincolor;
+
+                &::after {
+                    @include animations.hoverAnimationAfter
+                }
+
+                &:hover{
+                    color: colors.$textcolorDark;
+                }   
+
+                &:hover::after {
+                    @include animations.hoverAnimationAfterhover;
+                }
+            }
         }
     }
 
 
     &__fig {
-        height: 90vh;
+        height: 80vh;
         width: 100%;
         display: flex;
         align-items: center;
@@ -132,7 +179,7 @@
         margin-left: 8rem;
 
         &--art {
-            height: 25rem;
+            min-height: 25rem;
             width: 50%;
 
             display: flex;
@@ -224,6 +271,86 @@
         font-size: 300%;
         z-index: 2;
         color: colors.$textcolor;
+        &--2{
+            left: 10%;
+        }
+    }
+}
 
+@media screen and (max-width: 57.813rem) {
+    .main__arts{
+        margin-left: 0;
+
+        &--art{
+            width: 60%;
+        }
+    }
+
+    .main__text{
+        margin: 1rem;
+        font-size: 150%;
+        flex-direction: column;
+        &--art{
+            width: 100%;
+
+        }
+    }
+
+    .main__text--2{
+        margin: 1rem;
+        font-size: 150%;
+        flex-direction: column;
+        &--art{
+            width: 100%;
+
+        }
+    }
+}
+
+
+@media screen and (max-width: 53.125rem) {
+    .main__arts{
+        margin-left: 0;
+        align-items: center;
+        &--art{
+            width: 70%;
+        }
+    }
+
+    .main__agenda{
+        position: initial;
+        top: 0;
+        right: 0;
+        opacity: 1;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 37.5rem) {
+    .main__arts{
+        margin-left: 0;
+        align-items: center;
+        &--art{
+            width: 100%;
+        }
+    }
+
+    .main__menu{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 23.5rem) {
+    .main__arts{
+        margin: 0;
+        
+        &--art{
+            width: 100%;
+            flex-direction: column;
+            padding-bottom: 1rem;
+            align-items: center;
+        }
     }
 }
