@@ -319,6 +319,9 @@ body {
   justify-content: space-evenly;
   align-items: center;
 }
+.main__text--sec {
+  width: 60%;
+}
 .main__text--art {
   min-height: 90vh;
   width: 50%;
