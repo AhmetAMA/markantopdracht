@@ -35,8 +35,9 @@ body {
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;*/
 }
 .header__figure {
-  width: 7rem;
-  height: 7rem;
+  width: 15rem;
+  height: 15rem;
+  margin-top: 1rem;
 }
 .header__figure--logo {
   width: 100%;
@@ -297,6 +298,7 @@ body {
 }
 .main__text {
   min-height: 90vh;
+  justify-content: center;
   display: flex;
   margin: 10rem;
   gap: 4rem;
@@ -439,13 +441,13 @@ body {
 .main__agenda {
   width: 30rem;
   min-height: 40rem;
-  background: rgba(128, 147, 166, 0.3725490196);
+  background: #8093a6;
   position: absolute;
   top: 50%;
   right: 10%;
   border-radius: 0.5rem;
   padding: 2rem;
-  opacity: 0.5;
+  opacity: 0.8;
   transition: opacity 0.2s;
 }
 .main__agenda:hover {
@@ -477,6 +479,9 @@ body {
 }
 .main__header--2 {
   left: 10%;
+}
+.main__header--index {
+  left: 50%;
 }
 
 @media screen and (max-width: 57.813rem) {

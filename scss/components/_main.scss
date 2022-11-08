@@ -39,6 +39,8 @@
                     transition: 0.2s;
                     cursor: pointer;
                     
+                    
+
                     &:active{
                         background-color: #eee;
                     }
@@ -62,7 +64,7 @@
     }
     &__text{
         min-height: 90vh;
-        
+        justify-content: center;
         display: flex;
         margin: 10rem;
         gap: 4rem;
@@ -100,6 +102,7 @@
 
             &--header{
                 font-size: 100%;
+
             }
             
             &--para{
@@ -223,13 +226,13 @@
     &__agenda{
         width: 30rem;
         min-height: 40rem;
-        background: colors.$maincolordlight;
+        background: colors.$maincolor;
         position: absolute;
         top: 50%;
         right: 10%;
         border-radius: 0.5rem;
         padding:2rem;
-        opacity: 0.5;
+        opacity: 0.8;
         transition: opacity 0.2s;
         &:hover{
             opacity: 1;
@@ -273,6 +276,10 @@
         color: colors.$textcolor;
         &--2{
             left: 10%;
+        }
+        &--index{
+            left: 50%;
+            
         }
     }
 }
