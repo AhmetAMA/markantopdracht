@@ -4,7 +4,7 @@
 .form{
     display: flex;
     flex-direction: column;
-    width: 40%;
+    min-width: 40%;
 
     &__input{
         
@@ -40,6 +40,19 @@
             width: 40%;
         }
         
+    }
+
+    
+    &__naam, &__email{
+        display: flex;
+        gap: 2rem;
+    }
+    
+    &__bericht{
+        height: 25rem;
+        resize: none;
+        font-family: fonts.$mainfont;
+        font-size: 80%;
     }
 
     &__select{
