@@ -323,7 +323,7 @@ body {
   width: 60%;
 }
 .main__text--art {
-  min-height: 90vh;
+  min-height: 50vh;
   width: 50%;
   margin-top: 6rem;
   display: flex;
@@ -554,7 +554,7 @@ body {
 .form {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  min-width: 40%;
 }
 .form__input {
   padding: 1rem;
@@ -584,6 +584,16 @@ body {
 .form__input--geb {
   font-family: "Almarai", sans-serif;
   width: 40%;
+}
+.form__naam, .form__email {
+  display: flex;
+  gap: 2rem;
+}
+.form__bericht {
+  height: 25rem;
+  resize: none;
+  font-family: "Almarai", sans-serif;
+  font-size: 80%;
 }
 .form__select {
   padding: 0.25rem;
